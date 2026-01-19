@@ -338,5 +338,7 @@ Memory (φ): ${(φ*100).toFixed(0)}%
 # ---------------- Render ----------------
 components.html(
     css_code + html_code + js_code,
+    height=1600,
+    width=900,
     scrolling=True,
 )
