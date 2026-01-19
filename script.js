@@ -34,8 +34,8 @@ function calculate() {
   const ρ = β * ((At + Bt) / 2);
 
   // Exponent factor
-  const Af = Math.pow(Aσ, At);
-  const Bf = Math.pow(Bσ, Bt);
+  const Af = Math.pow(β, At);
+  const Bf = Math.pow(β, Bt);
 
   // Win probability
   const Ap = Math.atan((Aμ - Bμ) / ρ) / Math.PI + 0.5;
@@ -46,8 +46,8 @@ function calculate() {
   const Bμ_new = Bμ + Bf * (Bs - Bp) + Bf * Bς;
 
   // Updated deviations
-  const Aσ_new = φ * Aσ + β * Math.abs(Aς);
-  const Bσ_new = φ * Bσ + β * Math.abs(Bς);
+  const Aσ_new = φ * Aσ + Aσ * Math.abs(Aς);
+  const Bσ_new = φ * Bσ + Bσ * Math.abs(Bς);
 
   // Output
   document.getElementById("output").textContent =
