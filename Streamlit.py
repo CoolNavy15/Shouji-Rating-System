@@ -31,12 +31,9 @@ html_code = """
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet"></head>
 <body>
-
   <h1>Shouji Rating System</h1>
-  <h2>A new rating concept!?</h2>
-
   <div class="container">
-
+    <h2>A new rating concept!?</h2>
     <div class="Player_A_Container">
         <h2>Player A</h2>
         <p>Rating µ</p>
@@ -46,7 +43,6 @@ html_code = """
         <p>Volatility ς</p>
         <input id="A_ksi" type="range" value="0" min="-1" max="1" step="0.01" placeholder="A ς (Volatility)">
     </div>
-
     <div class="Player_B_Container">
         <h2>Player B</h2>
         <p>Rating µ</p>
@@ -56,7 +52,6 @@ html_code = """
         <p>Volatility ς</p>
         <input id="B_ksi" type="range" value="0" min="-1" max="1" step="0.01" placeholder="B ς (Volatility)">
     </div>
-
     <div class="Control_Container">
         <h2>Control Parameters</h2>
         <p>Variation β</p>
@@ -66,24 +61,18 @@ html_code = """
         <p>Memory φ</p>
         <input id="phi" type="range" value="0.5" step="0.01" min="0" max="1" placeholder="φ (Memory)">
     </div>
-
     <h2>Match Result</h2>
     <select id="result">
       <option class="A_Text" value="A">A Wins</option>
       <option class="D_Text" value="D">Draw</option>
       <option class="B_Text" value="B">B Wins</option>
     </select>
-
     <button id="calcBtn">Calculate</button>
-
     <pre id="output"></pre>
-
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
-
 """
 
 # ---------------- CSS ----------------
