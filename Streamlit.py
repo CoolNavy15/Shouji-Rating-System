@@ -326,7 +326,6 @@ A win probability: ${(Ap * 100).toFixed(0)}%
 B win probability: ${(Bp * 100).toFixed(0)}%
 
 Parameters
-Variation (β): ${β.toFixed(0)}
 Monentum (α): ${(α*100).toFixed(0)}%
 Memory (φ): ${(φ*100).toFixed(0)}%
 `;
