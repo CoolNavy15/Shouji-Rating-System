@@ -37,29 +37,29 @@ html_code = """
     <div class="Player_A_Container">
         <h2>Player A</h2>
         <p>Rating µ</p>
-        <input id="A_mu" type="number" value="1500" placeholder="A µ (Rating)">
+        <input id="A_mu" type="number" value="1500" placeholder="µ Rating">
         <p>Deviation σ</p>
-        <input id="A_sigma" type="number" value="225" placeholder="A σ (Deviation)">
+        <input id="A_sigma" type="number" value="225" placeholder="σ Deviation">
         <p>Volatility ς</p>
-        <input id="A_ksi" type="range" value="0" min="-1" max="1" step="0.01" placeholder="A ς (Volatility)">
+        <input id="A_ksi" type="range" value="0" min="-1" max="1" step="0.01" placeholder="ς Volatility">
     </div>
     <div class="Player_B_Container">
         <h2>Player B</h2>
         <p>Rating µ</p>
-        <input id="B_mu" type="number" value="1500" placeholder="B µ (Rating)">
+        <input id="B_mu" type="number" value="1500" placeholder="µ Rating">
         <p>Deviation σ</p>
-        <input id="B_sigma" type="number" value="225" placeholder="B σ (Deviation)">
+        <input id="B_sigma" type="number" value="225" placeholder="σ Deviation">
         <p>Volatility ς</p>
-        <input id="B_ksi" type="range" value="0" min="-1" max="1" step="0.01" placeholder="B ς (Volatility)">
+        <input id="B_ksi" type="range" value="0" min="-1" max="1" step="0.01" placeholder="ς Volatility">
     </div>
     <div class="Control_Container">
         <h2>Control Parameters</h2>
         <p>Variation β</p>
-        <input id="beta" type="number" value="400" placeholder="β (Variation)">
+        <input id="beta" type="number" value="400" placeholder="β Variation">
         <p>Momentum α</p>
-        <input id="alpha" type="range" value="0.5" step="0.01" min="0" max="1" placeholder="α (Momentum)">
+        <input id="alpha" type="range" value="0.5" step="0.01" min="0" max="1" placeholder="α Momentum">
         <p>Memory φ</p>
-        <input id="phi" type="range" value="0.5" step="0.01" min="0" max="1" placeholder="φ (Memory)">
+        <input id="phi" type="range" value="0.5" step="0.01" min="0" max="1" placeholder="φ Memory">
     </div>
     <h2>Match Result</h2>
     <select id="result">
@@ -301,22 +301,22 @@ function calculate() {
   document.getElementById("output").textContent =
 `=== Stats ===
 Player A
-New Rating (µ): ${Aμ_new.toFixed(0)}
-New Deviation (σ): ${Aσ_new.toFixed(0)}
-Recorded Volatility (ς): ${(Aς*100).toFixed(0)}%
+  New Rating µ: ${Aμ_new.toFixed(0)}
+  New Deviation σ: ${Aσ_new.toFixed(0)}
+  Recorded Volatility ς: ${(Aς*100).toFixed(0)}%
 
 Player B
-New Rating (µ): ${Bμ_new.toFixed(0)}
-New Deviation (σ): ${Bσ_new.toFixed(0)}
-Recorded Volatility (ς): ${(Bς*100).toFixed(0)}%
+  New Rating µ: ${Bμ_new.toFixed(0)}
+  New Deviation σ: ${Bσ_new.toFixed(0)}
+  Recorded Volatility ς: ${(Bς*100).toFixed(0)}%
 
 Probabilities
-A win probability: ${(Ap * 100).toFixed(0)}%
-B win probability: ${(Bp * 100).toFixed(0)}%
+  A win probability: ${(Ap * 100).toFixed(0)}%
+  B win probability: ${(Bp * 100).toFixed(0)}%
 
 Parameters
-Monentum (α): ${(α*100).toFixed(0)}%
-Memory (φ): ${(φ*100).toFixed(0)}%
+  Monentum α: ${(α*100).toFixed(0)}%
+  Memory φ: ${(φ*100).toFixed(0)}%
 `;
 }
 
