@@ -34,8 +34,8 @@ function calculate() {
   const ρ = β * ((At + Bt) / 2);
 
   // Exponent factor
-  const Af = Math.pow(β, At);
-  const Bf = Math.pow(β, Bt);
+  const Af = β * At;
+  const Bf = β * Bt;
 
   // Win probability
   const Ap = Math.atan((Aμ - Bμ) / ρ) / Math.PI + 0.5;
@@ -53,21 +53,21 @@ function calculate() {
   document.getElementById("output").textContent =
 `=== Stats ===
 Player A
-  New Rating µ: ${Aμ_new.toFixed(0)}
-  New Deviation σ: ${Aσ_new.toFixed(0)}
-  Recorded Volatility ς: ${(Aς*100).toFixed(0)}%
+New Rating (µ): ${Aμ_new.toFixed(0)}
+New Deviation (σ): ${Aσ_new.toFixed(0)}
+Recorded Volatility (ς): ${(Aς*100).toFixed(0)}%
 
 Player B
-  New Rating µ: ${Bμ_new.toFixed(0)}
-  New Deviation σ: ${Bσ_new.toFixed(0)}
-  Recorded Volatility ς: ${(Bς*100).toFixed(0)}%
+New Rating (µ): ${Bμ_new.toFixed(0)}
+New Deviation (σ): ${Bσ_new.toFixed(0)}
+Recorded Volatility (ς): ${(Bς*100).toFixed(0)}%
 
 Probabilities
-  A win probability: ${(Ap * 100).toFixed(0)}%
-  B win probability: ${(Bp * 100).toFixed(0)}%
+A win probability: ${(Ap * 100).toFixed(0)}%
+B win probability: ${(Bp * 100).toFixed(0)}%
 
 Parameters
-  Monentum α: ${(α*100).toFixed(0)}%
-  Memory φ: ${(φ*100).toFixed(0)}%
+Monentum (α): ${(α*100).toFixed(0)}%
+Memory (φ): ${(φ*100).toFixed(0)}%
 `;
 }
